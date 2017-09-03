@@ -1,0 +1,59 @@
+body {
+  padding: 5px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* .title {
+  position: absolute;
+  left: 362px;
+  top:94px;
+  width: 300px;
+  height: 60px;
+} */
+
+.jumbotron {
+  margin: 0;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.jumbotron * {
+  text-align: center;
+  margin: 0;
+}
+
+.jumbotron h1 {
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+.img-fluid {
+  border-radius: 8px;
+  border: 1px solid black;
+  /* width: 100%; */
+}
+
+#bold {
+  font-weight: 700;
+  color: #007DFF;
+}
+
+.keywords input::-webkit-input-placeholder {
+  font-size: 20px;
+}
+
+#myModal * {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .img-fluid {
+    border-radius: 8px;
+    /* width: 100%; */
+    /* height: 220px; */
+  }
+}

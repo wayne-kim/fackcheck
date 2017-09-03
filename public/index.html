@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <title>미디어 팩트체크</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css">
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body onresize="resize()">
+  <main class="container-fluid">
+    <div class="jumbotron">
+      <h1 class="display-3">미디어 팩트체크</h1>
+      <p class="lead">
+        <span id="bold">'기사를 덮기 위한 기사가 존재할까요?'</span><br> 우연히 비슷한 시기에 터진 정치 이슈와 연예 스캔들. 기사수 비교를 통해 우연이 맞는지 확인해보세요.</p>
+    </div>
+    <br>
+    <div class="img-border">
+      <svg class="img-fluid" width="1300" height="500"></svg>
+    </div>
+    <br>
+
+    <div class="keywords">
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon bg-danger text-white">키워드1</span>
+        <input type="text" class="form-control" placeholder="정치계 이슈 키워드" id="key1">
+      </div>
+      <br>
+      <div class="input-group input-group-lg">
+        <span class="input-group-addon bg-primary text-white">키워드2</span>
+        <input type="text" class="form-control" placeholder="연예계 이슈 키워드" id="key2">
+      </div>
+    </div>
+    <br>
+    <div class="input-group input-daterange">
+      <input type="text" class="form-control" id="start-date" placeholder="시작일">
+      <div class="input-group-addon">~</div>
+      <input type="text" class="form-control" id="end-date" placeholder="종료일" disabled>
+    </div>
+    <br>
+    <button type="button" class="btn btn-primary btn-lg btn-block" id="check">팩트체크</button>
+    <button type="button" class="btn btn-danger btn-lg btn-block" disabled>공유하기</button>
+  </main>
+
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <h4 class="modal-title">팩트체크 중 입니다.</h4>    
+          <h5>1분 이상 걸릴 수 있습니다.</h5>
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+  <script src="javascripts/datepicker.js"></script>
+
+  <!-- d3 -->
+  <script src="javascripts/d3/d3.min.js"></script>
+  <script src="javascripts/d3/myd3.js"></script>
+
+  <!-- crawler -->
+  <script src="javascripts/ajaxRequest.js"></script>
+</body>
+
+</html>
